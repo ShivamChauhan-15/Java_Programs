@@ -1,6 +1,5 @@
 class DemoPoly {
     private int sum(int a, int b) {
-
         return a + b;
     }
     static int x=26;
@@ -12,15 +11,15 @@ class DemoPoly {
 
         return a+b+c;
     }
-//    void sum1(int a,float b){
-//        System.out.println(a+b);
-//        System.out.println("intFloat");
-//
-//    }
-    void sum1(float a,int b){
+    void sum1(int a,float b){
         System.out.println(a+b);
-        System.out.println("floatInt");
+        System.out.println("intFloat");
+
     }
+//    void sum1(float a,int b){
+//        System.out.println(a+b);
+//        System.out.println("floatInt");
+//    }
     public static void sum(int a, double b) {
         //System.out.println(a + b);
         System.out.println("Prarent class");
@@ -29,6 +28,7 @@ class DemoPoly {
         int s= sum(a,b);
         return s;
     }
+
 }
 class DemoPolyDrive extends DemoPoly{
 //    @Override
@@ -46,6 +46,9 @@ class DemoPolyDrive extends DemoPoly{
 //        System.out.println(a + b);
         System.out.println("Child Class");
     }
+//    public Double sum(int a,int b){   //return type should be same for primitive data type but may be different in case of covarinat
+//        return a+b;
+//    }
 
 
 }
