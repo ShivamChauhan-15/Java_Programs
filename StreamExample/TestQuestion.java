@@ -29,11 +29,21 @@ public class TestQuestion {
 //            System.out.println("\nNo repeated characters found.");
 //        }
         //2nd Approach
+//        s.chars().mapToObj(c -> (char) c)
+//                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting())).forEach((k,v)->{
+//                    if(v>1) {
+//                        System.out.println(k);
+//                        System.exit(0);
+//                    }
+//                });
+        //3rd Approach
         System.out.println("\nFirst repeated character:");
         Set<Integer> set=new LinkedHashSet<>();
         s.chars()
                 .filter(i -> !set.add(i))
-                .findFirst().ifPresent(x-> System.out.println((char)x));
+                .findFirst().ifPresent(x-> {
+                    System.out.println((char) x);
+                });
 //        if(first1.isPresent())
 //            System.out.println("\nFirst Repeated Character:"+(char)first1.getAsInt());
 

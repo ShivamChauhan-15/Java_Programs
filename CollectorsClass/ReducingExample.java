@@ -24,7 +24,7 @@ public class ReducingExample {
         System.out.println(sum2);
 
         //3rd with mapper
-        System.out.println("with binary operator");
+        System.out.println("with mapper");
         List<Integer> num3 = Arrays.asList(1, 2, 3);
         Integer sum3=num3.stream()
                 .collect(Collectors.reducing(

@@ -8,7 +8,9 @@ class GenericFunctionExample {
                 + " = " + element);
     }
     static <T extends Number> double add(T e1,T e2){
+
         return e1.doubleValue()+e2.doubleValue();
+//        return e1+e2;             //not allowed beacuse T cannot allowed to work with operator
     }
     // Driver method
     public static void main(String[] args)

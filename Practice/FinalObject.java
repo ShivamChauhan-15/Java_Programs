@@ -3,10 +3,10 @@ package Practice;
 public class FinalObject {
     public static void main(String[] args) {
 //        System.out.println("Hello, World!");
-//        final A a=new A();
+        final A a=new A();
 //        a=null;
 //        a=new B();
-        B b=new B(5);
+//        B b=new B(5);
 //        b.display();
     }
 }

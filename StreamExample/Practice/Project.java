@@ -1,5 +1,5 @@
 package StreamExample.Practice;
-public class Project {
+public class Project  {
     private String name;
     private String team;
     private String projectManager;
@@ -41,4 +41,7 @@ public class Project {
     public String toString() {
         return name;
     }
+
+
+
 }

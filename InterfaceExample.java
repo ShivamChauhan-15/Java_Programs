@@ -5,7 +5,7 @@ interface Multiplication{
         System.out.println("Hello Everyone!");
     }
     default int square(int a){
-        System.out.println(("In Multiplication"));
+        System.out.println("In Multiplication");
         greeting();
         return multiply(a, a);
     }
@@ -17,6 +17,8 @@ interface Division extends Multiplication{
     int divide(int a,int b);
     default int square(int a){
         System.out.println("In Division");
+        int square = Multiplication.super.square(5);
+        System.out.println(square);
         return a*a;
     }
     static void display(){
@@ -42,7 +44,7 @@ class Drive implements Multiplication,Division,Third{
     public int square(int a){
 //        System.out.println(Multiplication.super.square(5)); //it is not invoked bc'z class run that inetrface method which is more specific
         System.out.println(Division.super.square(4));
-        System.out.println(Third.super.square(10));
+//        System.out.println(Third.super.square(10));
         return a;
     }
 }
@@ -50,7 +52,7 @@ public class InterfaceExample {
     public static void main(String[] args) {
         Drive d=new Drive();
 //        System.out.println(d.square(4));
-//        d.square(4);
+        d.square(4);
 //        Multiplication.display();
 //        Division.display();
         d.display();

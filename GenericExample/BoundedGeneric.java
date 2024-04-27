@@ -6,7 +6,12 @@ interface A{
         System.out.println("This is default method of interface");
     }
 }
-class B implements A{
+interface C{
+    default void print(){
+        System.out.println("Print Method");
+    }
+}
+class B implements A,C{
     public void display(){
         System.out.println("This is interface method which implements in class B");
     }
@@ -17,7 +22,8 @@ class B implements A{
         System.out.println("Show");
     }
 }
-class Bound<T extends B & A>{
+
+class Bound<T extends B & A & C>{
     private T obj;
     Bound(T obj){
         this.obj=obj;
@@ -34,7 +40,7 @@ class Bound<T extends B & A>{
 public class BoundedGeneric {
     public static void main(String[] args) {
         A a=new B();
-        Bound<B> b=new Bound<B>(new B());
+        Bound<B> b=new Bound<>(new B());
         System.out.println(b.getObj());
         b.dom();
     }

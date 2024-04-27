@@ -79,6 +79,7 @@ public class ToMapExample {
                         City::getName,
                         City::getTemperature,
                         (oldValue,newValue)-> newValue
+
                 )));
     }
 }

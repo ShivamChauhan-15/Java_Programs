@@ -32,6 +32,7 @@ public class DeepCloning {
             // be reflected in Deep1 field
             cln.t.x = 300;
             cln.t.y=500;
+            cln.name="Chauhan";
 
 
             // Change in object type field of Deep2 will not

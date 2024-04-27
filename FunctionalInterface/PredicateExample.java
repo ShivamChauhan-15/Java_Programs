@@ -2,7 +2,9 @@ package FunctionalInterface;
 
 import java.util.*;
 import java.util.function.BiFunction;
-import java.util.function.Predicate;
+import java.util.function.*;
+
+import static java.util.function.Predicate.not;
 
 public class PredicateExample {
     public static void main(String[] args) {
@@ -11,7 +13,7 @@ public class PredicateExample {
         Predicate<String> p2 = s -> s.startsWith("S");
         Predicate<String> p3 = s -> s.length() == 6;
 
-        //and
+//        //and
         Predicate<String> p4 = p2.and(p3);
         System.out.println(p4.test("Shivam"));
 
@@ -26,6 +28,14 @@ public class PredicateExample {
 
         //negate
         System.out.println(p7.negate().test("Shivam"));
+
+        //not
+        Predicate<String> p8=not(p7);
+        System.out.println(p8.test("Shivam"));
+
+        //biPredicate
+        BiPredicate<Integer, Integer> sumGreaterThan100 = (a, b) -> a + b > 100;
+        System.out.println(sumGreaterThan100.test(80,30));
     }
 
 

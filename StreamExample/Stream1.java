@@ -20,7 +20,7 @@ public class Stream1 {
         sl.filter(x->x.length()>5).forEach(System.out::println);
 
         //peek(), sorted()
-        System.out.println("peek() exapmle");
+        System.out.println("peek() example");
         Stream<Integer> stream = Stream.of(15, 2, 40, 4, 50,61,17,28,39,10);
         stream.filter(x->x>4).peek(System.out::println).map(x->x*2).sorted().peek(System.out::println).forEach(System.out::println);
 

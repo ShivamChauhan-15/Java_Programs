@@ -26,6 +26,7 @@ public class VariableCaptureInLambdaExpression {
             return value;
         };
 //        x=10;     //x becomes effectively final
+        v.n=20;
         System.out.println(f.apply(20));
         
     }
