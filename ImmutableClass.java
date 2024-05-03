@@ -41,9 +41,11 @@ public class ImmutableClass {
         num.add("234567");
         ImmutablePerson i=new ImmutablePerson("Shivam",num);
         System.out.println(i.getName());
+        List<String>listOfNumber=i.getPhoneNumbers();
+        System.out.println(listOfNumber);
+        listOfNumber.add("1237687");    //not allowed because list is unmodifiable
         System.out.println(i.getPhoneNumbers());
-        num.add("1237687");
-        System.out.println(i.getPhoneNumbers());
+
 //        Demo2 d=new Demo2("Rahul",num);
 //        System.out.println(d.getPhoneNumbers());
 //        System.out.println(d.getName());
