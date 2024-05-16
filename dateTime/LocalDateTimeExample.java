@@ -1,8 +1,9 @@
-import java.text.DateFormat;
+package dateTime;
+
 import java.time.*;
 import java.time.format.DateTimeFormatter;
 
-public class DateTime {
+public class LocalDateTimeExample {
     public static void main(String[] args) {
         //the current date
         LocalDate currentDate=LocalDate.now();
