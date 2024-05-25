@@ -16,6 +16,8 @@ class PerformAdd{
 }
 public class StaticMethodReference {
     public static void main(String[] args) {
+       //Addition a=(x,y)->PerformAdd.add(x,y);
+        //we can write above statement using method reference as
         Addition a=PerformAdd::add;
         System.out.println(a.sum(4,5));
         Addition.display();

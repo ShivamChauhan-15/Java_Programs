@@ -21,12 +21,12 @@ public class Inheritance extends Demo {
     public static void main(String[] args) {
 //        System.out.println(Demo.x);
 //        System.out.println(Inheritance.x);
-        Inheritance i = new Inheritance();
-        Demo d = new Inheritance();
-        Demo d1 = new Inheritance();
-
-        i.one();
-        d.one();
+//        Inheritance i = new Inheritance();
+//        Demo d = new Inheritance();
+//        Demo d1 = new Inheritance();
+//
+//        i.one();
+//        d.one();
     }
 }
 

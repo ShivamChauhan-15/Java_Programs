@@ -2,6 +2,7 @@ package dateTime;
 
 // Java code for ChronoUnits Enum
 import java.time.LocalDate;
+import java.time.LocalTime;
 import java.time.ZoneId;
 import java.time.chrono.ChronoLocalDate;
 import java.time.chrono.Chronology;
@@ -31,6 +32,11 @@ public class ChronologiesExample {
         // adding 2 decades to the current date
         LocalDate decade =date.plus(2, ChronoUnit.DECADES);
         System.out.println("20 years after today " +decade);
+
+        //truncateTo
+        LocalTime currentTime=LocalTime.now();
+        LocalTime time=currentTime.truncatedTo(ChronoUnit.MINUTES);
+        System.out.println("time in minutes: "+time);
 
         // Using Hijrah (Islamic) chronology
         Chronology hijrahChrono = HijrahChronology.INSTANCE;

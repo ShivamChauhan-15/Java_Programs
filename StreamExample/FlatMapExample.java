@@ -17,13 +17,13 @@ public class FlatMapExample {
 
         Stream<String> st = stringList.stream();
 
-//        Stream<String> result= st.flatMap((value) -> {
-//                    String[] split = value.split(" ");
-//                    List<String>l=Arrays.asList(split);
-//                    System.out.println("Before Stream: "+l);
-//                    return (Stream<String>) l.stream();
-//                });
-//        result.forEach(System.out::println);
+        Stream<String> result= st.flatMap((value) -> {
+                    String[] split = value.split(" ");
+                    List<String>l=Arrays.asList(split);
+                    System.out.println("Before Stream: "+l);
+                    return (Stream<String>) l.stream();
+                });
+        result.forEach(System.out::println);
         List<Integer>l1=Arrays.asList(1,2);
         List<Integer>l2=Arrays.asList(3,4);
         List<Integer>l3=Arrays.asList(5,6);

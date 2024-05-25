@@ -11,7 +11,7 @@ public class VariableCaptureInLambdaExpression {
     static int y;
     public static void main(String[] args) {
         VariableCaptureInLambdaExpression v=new VariableCaptureInLambdaExpression();
-        int x=10;
+        int x=10;   //Local Variable
         Function<Integer,Integer>f=num->{
             int value;
             v.n=10;    //Instance Variable Modification Allowed
@@ -25,7 +25,8 @@ public class VariableCaptureInLambdaExpression {
 //            x=5;        //Not Allowed
             return value;
         };
-//        x=10;     //x becomes effectively final
+//        x=15;     //x becomes effectively final
+        System.out.println(x);
         v.n=20;
         System.out.println(f.apply(20));
         
