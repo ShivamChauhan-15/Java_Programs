@@ -178,7 +178,7 @@ public class Task {
 
     //(7)Sort Employee by address
     public static void addSort(List<Employee> empList){
-        Collections.sort(empList,new CustomComparator(2));
+        Collections.sort(empList,new CustomComparator(1));
         for(Employee e:empList){
             System.out.println(e.getId()+", "+e.getName()+", "+e.getAddReference().getAddress());
         }
